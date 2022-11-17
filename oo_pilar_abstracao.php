@@ -47,7 +47,7 @@
 
         //métodos
         function resumirCadFunc() {
-            return "$this->nome possui $this->numFilhos filho(s), hoje ocupa o cargo de $this->cargo, com salário de $this->salario. O telefone de contato é: $this->telefone";
+            return "$this->nome possui $this->numFilhos filho(s), hoje ocupa o cargo de $this->cargo, com salário de R$ $this->salario,00. O telefone de contato é: $this->telefone";
         }
 
         function modificarNumFilhos($numFilhos) {
@@ -69,7 +69,7 @@
     $x->__set('nome', 'Ricardo');
     $x->__set('numFilhos', 'nenhum');
     $x->__set('telefone', '48 9999 9999');
-    $x->__set('cargo', 'Aux. Adm.');
-    $x->__set('salario', 1500);
+    $x->__set('cargo', 'Desenvolvedor');
+    $x->__set('salario', 3500);
     echo $x->resumirCadFunc();
 ?>
