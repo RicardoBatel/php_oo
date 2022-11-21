@@ -28,6 +28,7 @@
             }
         }
 */
+
         public function __get($attr){
             return $this->$attr;
         }
@@ -36,7 +37,8 @@
             $this->$attr = $value;
         }
 
-        public function executarMania(){
+
+        private function executarMania(){
             echo 'Assobiar';
         }
 
@@ -77,6 +79,20 @@
     echo $pai->getSobrenome();
 */
 
+    class Filho extends Pai {
+    /*
+        public function getAtributo($attr) {
+            return $this->$attr;
+        }
+
+        public function setAtributo($attr, $value){
+            $this->$attr = $value;
+        }
+        */
+    }
+
+
+/*
     $pai = new Pai();
 
     echo $pai->nome;
@@ -87,5 +103,44 @@
     echo '<hr/>';
 
     $pai->executarAcao();
+*/
+
+    $filho = new Filho();
+
+    /*
+    echo '<pre>';
+    print_r($filho);
+    echo '</pre>';
+
+    echo $filho->getAtributo('humor');
+    echo '<br/>';
+    echo $filho->getAtributo('sobrenome');    
+    $filho->setAtributo('humor', 'Triste');
+    echo '<br/>';
+    echo $filho->getAtributo('humor');
+    $filho->setAtributo('sobrenome', 'Durval');
+    echo '<br/>';
+    echo $filho->getAtributo('sobrenome');
+
+    echo '<hr/>';
+
+    echo $filho->getAtributo('nome');
+    $filho->setAtributo('nome', 'Ricardo');
+    echo '<pre>';
+    print_r($filho);
+    echo '</pre>';
+    echo $filho->getAtributo('nome');
+*/
+
+    echo '<hr/>';
+
+    echo '<pre>';
+    print_r($filho);
+    echo '</pre>';
+
+    //exibir os métodos do objeto
+    echo '<pre>';
+    print_r(get_class_methods($filho));
+    echo '</pre>';
 
 ?>
